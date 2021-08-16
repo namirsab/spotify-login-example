@@ -1,5 +1,15 @@
 # Simple Implicit Grant Workflow for Spotify OAuth2
 
+## How does it work?
+
+First of all, you have to create a .env file and set up the client id variable. Check `.env.template` for an example.
+
+Basically this app does the following:
+
+- When the user logs in, it takes the token from the location that was sent back from spotify and stores it
+  in session storage.
+- If after a successful login, the user tries to fetch the playlists again, then it would reuse the stored token
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
